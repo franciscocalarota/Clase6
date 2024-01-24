@@ -8,12 +8,12 @@ namespace Clase6
 {
     public class Producto
     {
-        protected int _id;
-        protected string _descripcion;
-        protected double _costo;
-        protected double _precioVenta;
-        protected int _stock;
-        protected int _idUsuario;
+        private int _id;
+        private string _descripcion;
+        private double _costo;
+        private double _precioVenta;
+        private int _stock;
+        private int _idUsuario;
        
 
         public Producto(int id, string descripcion, double costo,
@@ -34,8 +34,9 @@ namespace Clase6
         public int Stock { get => _stock; set => _stock = value; }
         public int IdUsuario { get => _idUsuario; set => _idUsuario = value; }
 
-        public string MostrarDatos(StringBuilder sb)
+        public string MostrarDatos()
         {
+            StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Producto: {this.Descripcion} \n");
             sb.AppendLine($"Stock: {this.Stock} \n");
             sb.AppendLine($"Precio de Venta: {this.PrecioVenta} \n");

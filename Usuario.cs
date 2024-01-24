@@ -8,12 +8,12 @@ namespace Clase6
 {
     public class Usuario
     {
-        protected int _id;
-        protected string _nombre;
-        protected string _apellido;
-        protected string _nombreUsuario;
-        protected long _contrasena;
-        protected string _mail;
+        private int _id;
+        private string _nombre;
+        private string _apellido;
+        private string _nombreUsuario;
+        private long _contrasena;
+        private string _mail;
 
     
         public Usuario(int id, string nombre, string apellido, string nombreUsuario, long contrasena, string mail)
