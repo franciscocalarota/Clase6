@@ -10,29 +10,30 @@ namespace Clase6
 {
     public class ProductoVendido
     {
-        private int ID;
-        private int IDPRODUCTO;
-        private int STOCK;
-        private int IVENTA;
+        private int _id;
+        private int _idProducto;
+        private int _stock;
+        private int _idVenta;
 
 
 
+        public ProductoVendido() { }
         private ProductoVendido(
             int id,
-            int idproducto,
+            int idProducto,
             int stock,
-            int venta)
+            int idVenta)
         {
-            this.ID = id;
-            this.IDPRODUCTO = idproducto;
-            this.STOCK = stock;
-            this.IVENTA = venta;
+            this._id = id;
+            this._idProducto = idProducto;
+            this._stock = stock;
+            this._idVenta = idVenta;
         }
-        public int Id { get { return ID; } set { ID = value; } }
-        public int idProducto { get { return IDPRODUCTO; } set { IDPRODUCTO = value; } }
+        public int Id { get { return _id; } set { _id = value; } }
+        public int IdProducto { get { return _idProducto; } set { _idProducto = value; } }
 
-        public int Stock { get { return STOCK; } set { STOCK = value; } }
+        public int Stock { get { return _stock; } set { _stock = value; } }
 
-        public int idVenta { get { return IVENTA; } set { IVENTA = value; } }
+        public int IdVenta { get { return _idVenta; } set { _idVenta = value; } }
     }
 }

@@ -8,47 +8,38 @@ namespace Clase6
 {
     public class Producto
     {
-        protected int Id;
-        protected string Descripcion;
-        protected double Costo;
-        protected double PrecioVenta;
-        protected int Stock;
-        protected int IdUsuario;
-        private int idProducto;
-        private int idVenta;
-        private string comentarios;
+        protected int _id;
+        protected string _descripcion;
+        protected double _costo;
+        protected double _precioVenta;
+        protected int _stock;
+        protected int _idUsuario;
+       
 
-        public Producto (int id) 
+        public Producto(int id, string descripcion, double costo,
+           double precioVenta, int stock, int idUsuario)
         {
-            this.Id = 0;
-            this.Costo = 0;
-            this.Stock = 0;
-            this.PrecioVenta = 0;
-            this.IdUsuario = 0;
-            this.Descripcion = string.Empty;
+            _id = id;
+            _descripcion = descripcion;
+            _costo = costo;
+            _precioVenta = precioVenta;
+            _stock = stock;
+            _idUsuario = idUsuario;
         }
 
-        public Producto(int idProducto, int stock, int idVenta)
-        {
-            this.idProducto = idProducto;
-            Stock = stock;
-            this.idVenta = idVenta;
-        }
+        public int Id { get => _id; set => _id = value; }
+        public string Descripcion { get => _descripcion; set => _descripcion = value; }
+        public double Costo { get => _costo; set => _costo = value; }
+        public double PrecioVenta { get => _precioVenta; set => _precioVenta = value; }
+        public int Stock { get => _stock; set => _stock = value; }
+        public int IdUsuario { get => _idUsuario; set => _idUsuario = value; }
 
-        public Producto(int id, int idUsuario, string comentarios) : this(id)
+        public string MostrarDatos(StringBuilder sb)
         {
-            IdUsuario = idUsuario;
-            this.comentarios = comentarios;
-        }
-
-        public Producto(int id, string descripcion, double costo, double precioVenta, int stock, int idUsuario)
-        {
-            this.Id = id;
-            this.Descripcion = descripcion;
-            this.Costo = costo;
-            this.PrecioVenta = precioVenta;
-            this.Stock = stock;
-            this.IdUsuario = idUsuario;
+            sb.AppendLine($"Producto: {this.Descripcion} \n");
+            sb.AppendLine($"Stock: {this.Stock} \n");
+            sb.AppendLine($"Precio de Venta: {this.PrecioVenta} \n");
+            return sb.ToString();
         }
     }
 }

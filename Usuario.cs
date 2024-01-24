@@ -8,32 +8,32 @@ namespace Clase6
 {
     public class Usuario
     {
-        protected int Id;
-        protected string Nombre;
-        protected string Apellido;
-        protected string NombreUsuario;
-        protected long Contraseña;
-        protected string Mail;
+        protected int _id;
+        protected string _nombre;
+        protected string _apellido;
+        protected string _nombreUsuario;
+        protected long _contrasena;
+        protected string _mail;
 
-        public Usuario() 
+    
+        public Usuario(int id, string nombre, string apellido, string nombreUsuario, long contrasena, string mail)
         {
-            this.Id = 0;
-            this.Nombre = string.Empty;
-            this.Apellido = string.Empty;
-            this.NombreUsuario = string.Empty;
-            this.Mail = string.Empty;
-            this.Contraseña = 0;
+            this._id = id;
+            this._nombre = nombre;
+            this._apellido = apellido;
+            this._nombreUsuario = nombreUsuario;
+            this._contrasena = contrasena;
+            this._mail = mail;
         }
 
-        public Usuario(int id, string nombre, string apellido, string nombreUsuario, long contraseña, string mail)
-        {
-            this.Id = id;
-            this.Nombre = nombre;
-            this.Apellido = apellido;
-            this.NombreUsuario = nombreUsuario;
-            this.Contraseña = contraseña;
-            this.Mail = mail;
-        }
+        public int Id { get { return _id; } set { _id = value; } }  
+        public string Nombre { get { return _nombre; } set { _nombre = value; } }
+        public string Apellido { get { return _apellido; } set { _apellido = value; } }
+        public string NombreUsuario { get { return _nombreUsuario; } set { _nombreUsuario = value; } }
+        public long Contrasena { get { return _contrasena; } set { _contrasena = value; } }
+        public string Mail { get { return _mail; } set { _mail = value; } }
+
+
     }
 
     
